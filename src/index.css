@@ -1,24 +1,29 @@
 .App {
-  text-align: center;
-  background-color: lightblue; /* Set the background color to light blue */
+  background-color: lightblue; /* Set the entire app's background to light blue */
+  min-height: 100vh; /* Ensure full height coverage */
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  align-items: center;
+  justify-content: center;
+  padding: 20px; /* Add some padding around the app */
 }
 
 .App-header {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: black; /* Changed to black for better visibility on light blue background */
+  width: 100%; /* Full width */
+  max-width: 500px; /* Adjust the max width as needed */
   padding: 20px; /* Add some padding */
+  color: black; /* Changed to black for better visibility on light blue background */
+  background-color: white; /* Set a white background for the form and display area */
+  border-radius: 10px; /* Optional: Rounded corners for the form and display area */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add some shadow for better visual separation */
+  margin-bottom: 20px; /* Space below the form and display area */
 }
 
 form {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* Creates a 2 column grid */
   gap: 20px; /* Spacing between grid items */
-  max-width: 500px; /* Adjust the max width as needed */
-  margin: auto;
+  width: 100%;
 }
 
 form div {
@@ -38,8 +43,7 @@ input {
 }
 
 button {
-  /* Make the button span across all columns */
-  grid-column: 1 / -1;
+  grid-column: 1 / -1; /* Make the button span across all columns */
   padding: 10px;
   border: none;
   border-radius: 4px;
@@ -55,10 +59,9 @@ button:hover {
 .display-box {
   border: 2px solid yellow;
   padding: 20px;
-  margin-top: 40px; /* Space above the display box */
-  text-align: left;
-  max-width: 500px; /* Match the form width */
-  margin: 40px auto 0; /* Centering the box */
+  text-align: center; /* Center text inside the box */
+  width: 100%; /* Full width */
+  margin-top: 20px; /* Space above the display box */
 }
 
 .display-box p {
